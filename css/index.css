@@ -367,12 +367,12 @@ header .container {
       &:hover::before {
         animation: shine 0.8s;
       }
+      &:hover img {
+        transform: rotate(6deg) scale(1.1);
+      }
       & img {
         max-width: 100%;
         transition: 0.3s;
-        &:hover {
-          transform: rotate(6deg) scale(1.1);
-        }
       }
     }
   }
@@ -421,7 +421,9 @@ header .container {
           bottom: 0;
           right: 0;
           transition: 0.4s;
-          border-width: 0px 0 137px 350px;
+          /* for 770px to 990px */
+          border-width: 0px 0 181px 727px;
+          /*  */
           border-style: solid;
           border-color: transparent transparent white transparent;
         }
@@ -440,6 +442,7 @@ header .container {
         justify-content: center;
         flex-flow: column;
         gap: 40px;
+        padding: 10px;
 
         & h1 {
           position: relative;
@@ -459,7 +462,7 @@ header .container {
           font-size: 19px;
         }
         & button {
-          padding: 10px 20px;
+          padding: 10px 25px;
           background-color: white;
           margin-bottom: 30px;
           border-radius: 6px;
@@ -469,6 +472,7 @@ header .container {
           font-weight: bolder;
           border: 2px solid;
           z-index: 1;
+          font-size: 20px;
           &::after {
             position: absolute;
             content: "";
@@ -488,7 +492,7 @@ header .container {
         width: 100%;
       }
       &:hover .img:after {
-        border-width: 0px 350px 137px 0px;
+        border-width: 0px 716px 159px 0px;
       }
     }
     .feat:first-of-type {
@@ -608,6 +612,76 @@ header .container {
 /* start team */
 .team {
   padding: 100px 0;
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin: 0 auto;
+    padding: 60px 0;
+    .member-card {
+      background-color: var(--sectioncolor);
+      padding: 70px 40px 0px 0;
+      border-radius: 10px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: #e4e4e4;
+        height: 100%;
+        width: 0%;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        transition: 0.3s;
+      }
+      &:hover img {
+        filter: grayscale(100%);
+      }
+      &:hover h2 {
+        color: #777;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    .member-info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      & i {
+        color: #777;
+        cursor: pointer;
+        &:hover {
+          color: var(--maincolor);
+        }
+      }
+      & div:first-of-type {
+        transition: 0.3s;
+      }
+      & img {
+        max-width: 100%;
+        border-radius: 10px;
+        transform: translateX(-30px);
+        transition: 0.3s;
+      }
+      & div:last-of-type {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        gap: 25px;
+      }
+    }
+    .brief {
+      position: relative;
+      z-index: 2;
+      padding: 15px;
+      & h2 {
+        color: var(--maincolor);
+      }
+    }
+  }
 }
 /* end tea, */
 @media (max-width: 768px) {
@@ -670,6 +744,13 @@ header .container {
       }
     }
   }
+  .team {
+    .container {
+      .member-card {
+        flex-basis: 80%;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -690,6 +771,9 @@ header .container {
       }
     }
   }
+  .member-card {
+    flex-basis: 46%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -709,5 +793,8 @@ header .container {
         border-width: 0px 343px 153px 0px !important;
       }
     }
+  }
+  .member-card {
+    flex-basis: 29%;
   }
 }
