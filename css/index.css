@@ -859,9 +859,7 @@ header .container {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    .img img {
-      max-width: 100%;
-    }
+
     .steps {
       display: flex;
       align-items: center;
@@ -1016,6 +1014,7 @@ header .container {
           border: none;
           outline: none;
           transition: 0.3s;
+          caret-color: var(--maincolor);
           &::placeholder {
             transition: 0.3s;
           }
@@ -1378,6 +1377,7 @@ header .container {
       width: 80%;
       resize: none;
       outline: none;
+      caret-color: var(--maincolor);
     }
     & input:last-of-type {
       background-color: var(--maincolor);
@@ -1589,6 +1589,9 @@ footer {
     .step {
       flex-flow: column;
       text-align: center;
+    }
+    .img img {
+      width: 100%;
     }
   }
   .events form {
