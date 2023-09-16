@@ -29,10 +29,12 @@ ul {
   width: fit-content;
   transition: 0.2s;
   margin: auto;
+  background-color: inherit;
+  z-index: 1;
   & h1 {
     text-transform: uppercase;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     transition: 0.2s;
     margin: 10px 0;
   }
@@ -918,6 +920,7 @@ header .container {
 .events {
   padding: 100px 0;
   position: relative;
+  background-color: white;
   &::after {
     position: absolute;
     content: "";
