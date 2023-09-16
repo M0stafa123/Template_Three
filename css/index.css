@@ -12,9 +12,9 @@
 html {
   scroll-behavior: smooth;
 }
-/* body * {
-  outline: 1px solid;
-} */
+body {
+  margin: 0;
+}
 /* start componetns */
 a {
   color: black;
