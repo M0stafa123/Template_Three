@@ -5,6 +5,16 @@
   list-style: none;
   text-decoration: none;
 }
+.scroll-prog {
+  position: fixed;
+  top: 0px;
+  height: 4px;
+  background-color: #2196f3;
+  width: 0%;
+
+  display: block;
+  z-index: 9999999;
+}
 :root {
   --maincolor: #2196f3;
   --sectioncolor: #ececec;
@@ -829,6 +839,7 @@ header .container {
             display: block;
             height: 100%;
             transition: 0.3s;
+            width: 0;
           }
         }
         & > span {
